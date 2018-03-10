@@ -1,6 +1,6 @@
 ---
 
-- name: Symfony project
+- name: rest project
   hosts: dev
   remote_user: vagrant
 
@@ -9,14 +9,16 @@
       users:
         - username: vagrant
     - mysql
-    - role: php7
+    - role: php7_1
       php_dev: yes
     - role: apache2
       become: yes
       apache_vhosts:
         # Additional optional properties: 'serveradmin, serveralias, extra_parameters'.
-        - servername: "symfony.local"
-          documentroot: "/var/www/symfony.local/web"
+        - servername: "rest.local"
+          documentroot: "/var/www/rest.local/public"
     - common
-    - symfony3
+    - role: symfony4
+      app_dir: /var/www/rest.local
+
 ...
