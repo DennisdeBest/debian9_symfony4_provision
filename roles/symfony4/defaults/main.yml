@@ -4,3 +4,4 @@ create_database: true
 components:
   - doctrine/orm
   - doctrine/doctrine-bundle
+  - twig
