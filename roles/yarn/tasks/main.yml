@@ -18,3 +18,7 @@
     name: yarn
     state: present
   become: true
+
+- name: Install packages based on package.json.
+  yarn:
+    path: "{{ app_dir }}"
