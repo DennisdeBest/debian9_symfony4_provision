@@ -12,3 +12,4 @@ components:
   - symfony/apache-pack
   - debug --dev
   - asset
+  - encore
