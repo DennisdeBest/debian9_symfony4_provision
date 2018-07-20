@@ -5,3 +5,10 @@ components:
   - doctrine/orm
   - doctrine/doctrine-bundle
   - twig
+  - annotations
+  - logger
+  - mailer
+  - sec-checker --dev
+  - symfony/apache-pack
+  - debug --dev
+  - asset
