@@ -1,0 +1,20 @@
+---
+- name: Import YARN APT key
+  apt_key:
+    url: "{{ yarn_debian_repo_gpg_key_url }}"
+    state: present
+  become: true
+
+- name: Install YARN APT repo
+  apt_repository:
+    repo: "deb {{ yarn_debian_repo_url }}"
+    filename: "yarn"
+    state: present
+    update_cache: yes
+  become: true
+
+- name: Install yarn
+  apt:
+    name: yarn
+    state: present
+  become: true
