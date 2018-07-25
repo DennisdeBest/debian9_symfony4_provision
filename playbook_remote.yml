@@ -1,28 +1,28 @@
 ---
 
 - name: lrdq
-  hosts: dev
-  remote_user: vagrant
+  hosts: test
+  remote_user: exploit
 
   roles:
+    - common
     - role: gantsign.oh-my-zsh
       users:
-        - username: vagrant
+        - username: exploit
     - mysql
     - role: geerlingguy.nodejs
       nodejs_version: "10.x"
     - role: yarn
-      app_dir: /var/www/lrdq.local
+      install_packages: false
     - role: php7_1
       php_dev: yes
     - role: apache2
       become: yes
       apache_vhosts:
         # Additional optional properties: 'serveradmin, serveralias, extra_parameters'.
-        - servername: "lrdq.local"
-          documentroot: "/var/www/lrdq.local/public"
-    - common
-    - role: symfony4
-      app_dir: /var/www/lrdq.local
+        - servername: "test.debest.fr"
+          documentroot: "/var/www/test.debest.fr/public"
+#    - role: symfony4
+#      app_dir: /var/www/lrdq.local
 
 ...

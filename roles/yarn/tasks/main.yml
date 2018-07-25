@@ -22,3 +22,4 @@
 - name: Install packages based on package.json.
   yarn:
     path: "{{ app_dir }}"
+  when: install_packages
