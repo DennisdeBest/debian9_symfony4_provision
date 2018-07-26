@@ -1,0 +1,12 @@
+---
+- hosts: test
+  remote_user: exploit
+
+  vars:
+    ansistrano_deploy_to: '/var/www/test.debest.fr'
+    ansistrano_deploy_from: '../project/'
+    ansistrano_deploy_via: 'git'
+    ansistrano_git_repo: 'git'
+
+  roles:
+    - carlosbuenosvinos.ansistrano-deploy

@@ -8,6 +8,10 @@
     - role: gantsign.oh-my-zsh
       users:
         - username: vagrant
+    - role: geerlingguy.nodejs
+      nodejs_version: "10.x"
+    - role: yarn
+      app_dir: /var/www/lrdq.local
     - mysql
     - role: geerlingguy.nodejs
       nodejs_version: "10.x"

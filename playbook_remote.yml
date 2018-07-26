@@ -21,7 +21,7 @@
       apache_vhosts:
         # Additional optional properties: 'serveradmin, serveralias, extra_parameters'.
         - servername: "test.debest.fr"
-          documentroot: "/var/www/test.debest.fr/public"
+          documentroot: "/var/www/test.debest.fr/current/public"
 #    - role: symfony4
 #      app_dir: /var/www/lrdq.local
 
